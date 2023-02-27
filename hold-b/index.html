@@ -15,7 +15,11 @@
   </head>
   <body id="root">
     <i id="sun" class="bi bi-sun sun"></i>
-    <div class="container yellow"></div>
+    <div class="container yellow">
+      <h1 id="h1">Tomt</h1>
+      <input id="input" type="text" />
+      <button onclick="gem()">Gem</button>
+    </div>
     <div class="container"></div>
     <div class="container yellow"></div>
     <div class="container"></div>
@@ -23,6 +27,15 @@
     <script src="script.js"></script>
     <script>
       console.log("Hejsa :)");
+      let name = "Mathias Nielsen";
+      console.log(name);
+
+      function gem() {
+        console.log("Hej fra knap");
+        let x = document.getElementById("input").value;
+        console.log(x);
+        document.getElementById("h1").innerText = x;
+      }
     </script>
   </body>
 </html>
