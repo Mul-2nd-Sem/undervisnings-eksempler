@@ -15,14 +15,28 @@
   </head>
   <body id="root">
     <i id="sun" class="bi bi-sun sun"></i>
-    <div class="container yellow"></div>
+    <div class="container yellow">
+      <h1 id="titel-felt">Tomt</h1>
+      <input id="input-felt" type="text" />
+      <button onclick="updateTitle()">Gem</button>
+    </div>
     <div class="container"></div>
     <div class="container yellow"></div>
     <div class="container"></div>
     <div class="container yellow"></div>
     <script src="script.js"></script>
     <script>
-      console.log("Hejsa :)");
+      let name = "Mathias";
+      document.getElementById("titel-felt").innerText = name;
+
+      console.log(name);
+
+      function updateTitle() {
+        console.log("Hej fra funktion");
+        let input = document.getElementById("input-felt").value;
+        console.log(input);
+        document.getElementById("titel-felt").innerText = input;
+      }
     </script>
   </body>
 </html>
